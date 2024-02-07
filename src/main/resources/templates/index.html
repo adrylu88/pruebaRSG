@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/plantilla :: head">
+        <title>Login</title>
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: header"></header>
+
+        <section id="actions" class="py-4 mb-4 bg-light">
+            <div class="container">
+                <div class="row">
+                    <!--se pueden agregar botones-->
+                </div>
+            </div>
+        </section>
+
+        <section id="currentBalance">
+            <div class="container">
+                <div class="row">
+                    
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Current Balance</h4>
+                            </div>
+                           
+
+
+
+                           <table class="edittable" id="currentBalanceTable" >
+                              <thead>
+
+                                 <tr>
+                                    
+                                    <th style="text-align: left; width: 400px">Num. Cuenta</th>
+                                    <th style="text-align: left; width: 400px">Balance</th>
+                                    <th style="text-align: left; width: 350px">Fecha última transferencia</th>
+
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="col text-center"
+                                    th:each="identify:${listaCuentas}">
+
+                                    
+                                    <td style="text-align: center" th:text="${identify.cuentaId}"></td>
+
+                                    
+                                    <td style="text-align: left"
+                                       th:text="${identify.balance}"></td>
+
+                                    
+                                    <td style="text-align: left"
+                                       th:text="${identify.fecha}"></td>
+
+                                    
+                                    
+
+         
+                                 </tr>
+
+                              </tbody>
+                           </table>
+
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer th:replace="layout/plantilla :: footer"></footer>
+    </body>
+</html>

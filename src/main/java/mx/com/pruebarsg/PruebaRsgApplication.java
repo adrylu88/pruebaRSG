@@ -1,0 +1,15 @@
+package mx.com.pruebarsg;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PruebaRsgApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(PruebaRsgApplication.class, args);
+
+		System.out.println("Hola mundo, inciando prueba....");
+	}
+
+}
